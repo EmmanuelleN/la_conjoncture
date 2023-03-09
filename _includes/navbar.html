@@ -1,30 +1,38 @@
-<nav class="py-2 z-20 fixed w-full bg-cream border-b-2">
-    <div class="container px-4 mx-auto flex justify-between items-center">
+<nav class="py-1 z-20 fixed w-full bg-cream border-b-2">
+    <div class="container px-4 mx-auto flex justify-between md:items-center">
         <a href="" class="fill-current hover:text-blue transition-all ease-in-out duration-300">
             {% include logo.html %}
         </a>
 
         <div class="flex flex-col">
-            <button class="block xl:hidden uppercase ml-auto" id="menu-button">
-                Menu
+            <button class="block md:hidden uppercase ml-auto" id="menu-button">
+                {% include hamburger_icon.html %}
             </button>
-            <ul class="hidden h-screen xl:h-auto xl:flex" id="menu-links">
-                <li class="mt-10 xl:mt-0 text-right xl:text-center xl:ml-8 relative flex items-center justify-end">
-                    <a href="/">agenda</a>
+            <ul class="hidden h-screen md:h-auto md:flex" id="menu-links">
+                <li class="mt-10 md:mt-0 text-right md:text-center md:ml-8 relative flex items-center justify-end">
+                    <a href="/" class="link">agenda</a>
                 </li>
-                <li class="mt-10 xl:mt-0 text-right xl:text-center xl:ml-8 relative flex items-center justify-end">
-                    <a href="/projets">projets</a>
+                <li class="mt-10 md:mt-0 text-right md:text-center md:ml-8 relative flex items-center justify-end">
+                    <a href="/projets" class="link">projets</a>
                 </li>
-                <li class="mt-10 xl:mt-0 text-right xl:text-center xl:ml-8 relative flex items-center justify-end">
-                    <a href="/agenda">les artistes</a>
+                <li class="mt-10 md:mt-0 text-right md:text-center md:ml-8 relative flex items-center justify-end">
+                    <a href="/agenda" class="link">les artistes</a>
                 </li>
-                <li class="mt-10 xl:mt-0 text-right xl:text-center xl:ml-8 relative flex items-center justify-end">
-                    <a href="/mailing">contact</a>
+                <li class="mt-10 md:mt-0 text-right md:text-center md:ml-8 relative flex items-center justify-end">
+                    <a href="/mailing" class="link">contact</a>
                 </li>
-                <li class="mt-10 xl:mt-0 text-right xl:text-center xl:ml-8 relative flex items-center justify-end">
-                    <a href="/contact">la radio</a>
+                <li class="mt-10 md:mt-0 text-right md:text-center md:ml-8 relative flex items-center justify-end">
+                    <a href="/contact" class="relative group">
+                        {% include ink_spot.html %}
+                        <span class="absolute text-cream z-30 top-1/2 right-3 -translate-y-1/2 whitespace-nowrap">
+                            la radio
+                        </span>
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script src="/assets/javascript/navbar.js" type="module"></script>
+
